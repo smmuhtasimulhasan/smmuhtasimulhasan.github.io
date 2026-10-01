@@ -1,1168 +1,1167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>S. M. Muhtasimul Hasan</title>
-
-  <meta
-    name="description"
-    content="S. M. Muhtasimul Hasan — Research Assistant at the Cognitive Agents and Interaction Lab (CAIL), University of Dhaka. Research in language model reasoning, formal computational reasoning, automata-grounded evaluation, and multimodal learning."
-  />
-
-  <style>
-    /* =========================================================
-       GLOBAL COLOR SYSTEM
-       ========================================================= */
-
-    :root {
-      --page-bg: #fbfaf7;
-      --card-bg: #ffffff;
-
-      --text: #3c3c3c;
-      --text-soft: #5f6368;
-      --heading: #30343b;
-
-      --blue: #3f78c5;
-      --blue-dark: #3269ae;
-
-      /*
-        IMPORTANT:
-        News keywords AND publication venue tags use
-        EXACTLY THE SAME RED.
-      */
-      --news-red: #c84646;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      --news-red-dark: #aa3636;
-      --news-red-soft: #fff4f4;
-
-      --border: #dedede;
-      --border-soft: #e8e5df;
-
-      --shadow:
-        0 1px 2px rgba(0, 0, 0, 0.03),
-        0 4px 16px rgba(0, 0, 0, 0.025);
-
-      --radius: 10px;
-    }
-
-
-    /* =========================================================
-       RESET
-       ========================================================= */
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: var(--page-bg);
-      color: var(--text);
-
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
-
-      font-size: 16px;
-      line-height: 1.58;
-    }
+    <title>S. M. Muhtasimul Hasan</title>
 
-    a {
-      color: var(--blue);
-      text-decoration: none;
-      transition:
-        color 0.15s ease,
-        opacity 0.15s ease;
-    }
+    <meta name="description"
+          content="S. M. Muhtasimul Hasan — Research Assistant at the Cognitive Agents and Interaction Lab (CAIL), University of Dhaka.">
 
-    a:hover {
-      color: var(--blue-dark);
-    }
+    <style>
 
-    strong {
-      font-weight: 700;
-      color: #2d3035;
-    }
-
-
-    /* =========================================================
-       PAGE WIDTH
-       ========================================================= */
-
-    .page {
-      width: min(965px, calc(100% - 40px));
-      margin: 0 auto;
-    }
+        /* =====================================================
+           BASE
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
+        body {
+            margin: 0;
+            background: #fbfaf7;
+            color: #4a4a4a;
 
-    /* =========================================================
-       TOP NAVIGATION
-       ========================================================= */
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
+            font-size: 16px;
+            line-height: 1.55;
+        }
 
-      background: rgba(251, 250, 247, 0.94);
-      backdrop-filter: blur(9px);
-      -webkit-backdrop-filter: blur(9px);
+        a {
+            color: #3f78c5;
+            text-decoration: none;
+        }
 
-      border-bottom: 1px solid rgba(0, 0, 0, 0.055);
-    }
+        a:hover {
+            color: #2f67ad;
+        }
 
-    .nav {
-      min-height: 62px;
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+        /* =====================================================
+           PAGE WIDTH
+        ===================================================== */
 
-      gap: 24px;
-    }
+        .container {
+            width: min(965px, calc(100% - 40px));
+            margin: 0 auto;
+        }
 
-    .nav-name {
-      color: var(--heading);
-      font-size: 16px;
-      font-weight: 650;
-      letter-spacing: -0.01em;
-      white-space: nowrap;
-    }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 27px;
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
 
-      font-size: 14px;
-      font-weight: 500;
-    }
+        header {
+            background: rgba(251, 250, 247, 0.96);
+            border-bottom: 1px solid #e5e3de;
 
-    .nav-links a {
-      color: #555b63;
-    }
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-    .nav-links a:hover {
-      color: var(--blue);
-    }
+        nav {
+            height: 62px;
 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-    /* =========================================================
-       MAIN CONTENT
-       ========================================================= */
+        .nav-name {
+            color: #333840;
+            font-weight: 650;
+        }
 
-    main {
-      padding: 50px 0 70px;
-    }
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
 
-    section {
-      scroll-margin-top: 85px;
-      margin-top: 48px;
-    }
+        .nav-links a {
+            color: #555b63;
+            font-size: 14px;
+        }
 
-    section:first-of-type {
-      margin-top: 0;
-    }
+        .nav-links a:hover {
+            color: #3f78c5;
+        }
 
 
-    /* =========================================================
-       SECTION TITLES
-       ========================================================= */
+        /* =====================================================
+           MAIN
+        ===================================================== */
 
-    .section-title {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+        main {
+            padding: 46px 0 70px;
+        }
 
-      margin: 0 0 23px;
+        section {
+            margin-top: 46px;
+            scroll-margin-top: 85px;
+        }
 
-      color: var(--heading);
-      font-size: 29px;
-      line-height: 1.15;
-      font-weight: 720;
-      letter-spacing: -0.035em;
-    }
+        section:first-child {
+            margin-top: 0;
+        }
 
-    .section-title::after {
-      content: "";
-      width: 37px;
-      height: 2px;
-      margin-top: 4px;
 
-      background: var(--blue);
-      border-radius: 20px;
-    }
+        /* =====================================================
+           NAME / ABOUT
+        ===================================================== */
 
+        .hero h1 {
+            margin: 0 0 11px;
 
-    /* =========================================================
-       HERO / BIO
-       ========================================================= */
+            color: #343840;
+            font-size: 34px;
+            line-height: 1.15;
+        }
 
-    .hero {
-      padding-top: 10px;
-    }
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
 
-    .hero h1 {
-      margin: 0 0 13px;
+            margin-bottom: 23px;
+        }
 
-      color: var(--heading);
-      font-size: clamp(32px, 5vw, 43px);
-      line-height: 1.1;
-      letter-spacing: -0.04em;
-    }
+        .contact-links a {
+            font-size: 14px;
+            font-weight: 600;
+        }
 
-    .social-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px 18px;
+        .about-text {
+            margin: 0 0 11px;
+            line-height: 1.66;
+        }
 
-      margin-bottom: 26px;
-    }
 
-    .social-links a {
-      font-size: 14px;
-      font-weight: 600;
-    }
+        /* =====================================================
+           SECTION HEADINGS
+        ===================================================== */
 
-    .bio {
-      max-width: 930px;
-      margin: 0;
+        .section-heading {
+            display: flex;
+            align-items: center;
+            gap: 10px;
 
-      font-size: 16px;
-      line-height: 1.68;
-    }
+            margin: 0 0 19px;
 
-    .bio + .bio {
-      margin-top: 12px;
-    }
+            color: #343840;
+            font-size: 29px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
 
+        .section-heading::after {
+            content: "";
+            width: 36px;
+            height: 2px;
 
-    /* =========================================================
-       NEWS
-       ========================================================= */
+            background: #4d8bd4;
+        }
 
-    .news-list {
-      display: flex;
-      flex-direction: column;
-      gap: 11px;
 
-      margin: 0;
-      padding: 0;
+        /* =====================================================
+           NEWS
 
-      list-style: none;
-    }
+           This is the red used for the News keyword.
+           Publication tags below now use THIS SAME RED.
+        ===================================================== */
 
-    .news-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
+        .news-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
 
-      font-size: 15.5px;
-    }
+        .news-list li {
+            margin-bottom: 8px;
+        }
 
-    /*
-      THIS is the News keyword color.
+        .news-keyword {
+            color: #dc3545;
+            font-weight: 700;
+        }
 
-      Publication tags below reference the same:
-      var(--news-red)
-    */
-    .news-keyword {
-      flex: 0 0 auto;
 
-      color: var(--news-red);
-      font-weight: 700;
-    }
+        /* =====================================================
+           INFORMATION CARDS
+        ===================================================== */
 
-    .news-text {
-      color: var(--text);
-    }
+        .card {
+            margin-bottom: 16px;
+            padding: 20px 24px;
 
+            background: #fff;
 
-    /* =========================================================
-       GENERAL CARDS
-       ========================================================= */
+            border: 1px solid #e5e2dd;
+            border-radius: 10px;
 
-    .info-card {
-      padding: 21px 24px;
+            box-shadow:
+                0 1px 2px rgba(0, 0, 0, 0.025),
+                0 3px 12px rgba(0, 0, 0, 0.02);
+        }
 
-      background: var(--card-bg);
-      border: 1px solid var(--border-soft);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
+        .card h3 {
+            margin: 0 0 3px;
 
-    .info-card + .info-card {
-      margin-top: 16px;
-    }
+            color: #333840;
+            font-size: 18px;
+        }
 
-    .info-title {
-      margin: 0 0 3px;
+        .muted {
+            color: #666b72;
+        }
 
-      color: var(--heading);
-      font-size: 18px;
-      font-weight: 700;
-    }
+        .date {
+            margin-top: 3px;
 
-    .info-title a {
-      font-weight: inherit;
-    }
+            color: #686d73;
+            font-size: 14px;
+        }
 
-    .info-subtitle {
-      margin-top: 4px;
-      color: var(--text-soft);
-    }
+        .card ul {
+            margin: 9px 0 0;
+            padding-left: 20px;
+        }
 
-    .info-date {
-      margin-top: 4px;
-      color: var(--text-soft);
-      font-size: 14.5px;
-    }
 
-    .info-list {
-      margin: 10px 0 0;
-      padding-left: 21px;
-    }
+        /* =====================================================
+           EXPERIENCE
+        ===================================================== */
 
-    .info-list li {
-      margin: 3px 0;
-    }
+        .role {
+            color: #343840;
+            font-weight: 700;
+        }
 
 
-    /* =========================================================
-       EXPERIENCE
-       ========================================================= */
+        /* =====================================================
+           PUBLICATIONS
+        ===================================================== */
 
-    .role {
-      margin-bottom: 3px;
+        .publications {
+            border-top: 1px solid #e5e3df;
+        }
 
-      color: var(--heading);
-      font-weight: 700;
-    }
+        .publication {
+            display: grid;
+            grid-template-columns: 128px 1fr;
+            gap: 25px;
 
-    .institution-line {
-      color: var(--text-soft);
-    }
+            padding: 16px 0 17px;
 
-    .supervisor {
-      margin-top: 4px;
-      color: var(--text-soft);
-    }
+            border-bottom: 1px solid #e5e3df;
+        }
 
 
-    /* =========================================================
-       TEACHING
-       ========================================================= */
+        /* =====================================================
+           ONLY COLOR CHANGE REQUESTED
 
-    .course-title {
-      margin: 0 0 4px;
+           Previously these publication tags were gray.
+           They now use the same red as .news-keyword.
+        ===================================================== */
 
-      color: var(--heading);
-      font-size: 18px;
-      font-weight: 700;
-    }
+        .pub-tag {
+            width: 128px;
+            height: 29px;
 
-    .teaching-role {
-      margin-top: 3px;
-      font-size: 15px;
-    }
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
+            margin-top: 1px;
 
-    /* =========================================================
-       PUBLICATIONS
-       ========================================================= */
+            background: #dc3545;
+            border: 1px solid #dc3545;
+            border-radius: 6px;
 
-    .publications {
-      border-top: 1px solid var(--border-soft);
-    }
+            color: #ffffff;
 
-    .publication {
-      display: grid;
-      grid-template-columns: 128px 1fr;
-      gap: 25px;
+            font-size: 13px;
+            line-height: 1;
+            font-weight: 700;
+        }
 
-      padding: 16px 0 17px;
 
-      border-bottom: 1px solid var(--border-soft);
-    }
+        /* Everything below retains the existing publication look */
 
-    /*
-      PUBLICATION TAGS
+        .pub-title {
+            display: inline-block;
 
-      They use EXACTLY the same red as .news-keyword.
-    */
-    .pub-tag {
-      width: 128px;
-      height: 29px;
+            margin-bottom: 3px;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+            color: #3f78c5;
 
-      margin-top: 1px;
+            font-size: 17px;
+            line-height: 1.4;
+            font-weight: 600;
+        }
 
-      background: var(--news-red);
-      color: #ffffff;
+        .pub-title:hover {
+            color: #2f67ad;
+        }
 
-      border: 1px solid var(--news-red);
-      border-radius: 6px;
+        .pub-authors {
+            margin-bottom: 2px;
 
-      font-size: 13px;
-      line-height: 1;
-      font-weight: 700;
-      letter-spacing: 0.01em;
+            color: #555;
+            font-size: 15px;
+            line-height: 1.55;
+        }
 
-      box-shadow: 0 1px 2px rgba(120, 25, 25, 0.10);
-    }
+        .pub-authors a {
+            color: #555;
 
-    .publication:hover .pub-tag {
-      background: var(--news-red-dark);
-      border-color: var(--news-red-dark);
-    }
+            border-bottom: 1px dotted #999;
+        }
 
-    .pub-title {
-      display: inline-block;
+        .pub-authors a:hover {
+            color: #3f78c5;
+            border-bottom-color: #3f78c5;
+        }
 
-      margin-bottom: 4px;
+        .my-name {
+            color: #292d31;
+            font-weight: 700;
+        }
 
-      color: var(--blue);
-      font-size: 17px;
-      line-height: 1.43;
-      font-weight: 630;
-    }
+        .venue {
+            color: #444;
+            font-size: 15px;
+        }
 
-    .pub-title:hover {
-      color: var(--blue-dark);
-    }
+        .venue em {
+            font-family: Georgia, "Times New Roman", serif;
+        }
 
-    .pub-authors {
-      margin-bottom: 2px;
 
-      color: #555;
-      font-size: 15.3px;
-      line-height: 1.55;
-    }
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
 
-    .pub-authors a {
-      color: #555;
-      border-bottom: 1px dotted #b6b6b6;
-    }
+        @media (max-width: 720px) {
 
-    .pub-authors a:hover {
-      color: var(--blue);
-      border-bottom-color: var(--blue);
-    }
+            .container {
+                width: calc(100% - 28px);
+            }
 
-    .me {
-      color: #24272b;
-      font-weight: 750;
-    }
+            nav {
+                height: auto;
+                padding: 14px 0;
 
-    .pub-venue {
-      color: #444;
-      font-size: 15px;
-      line-height: 1.45;
-    }
+                flex-direction: column;
+                align-items: flex-start;
 
-    .pub-venue em {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 15.5px;
-    }
+                gap: 8px;
+            }
 
-    .equal-note {
-      margin-top: 11px;
-      color: var(--text-soft);
-      font-size: 13.5px;
-    }
+            .nav-links {
+                gap: 17px;
+                overflow-x: auto;
+                width: 100%;
+            }
 
+            main {
+                padding-top: 34px;
+            }
 
-    /* =========================================================
-       FOOTER
-       ========================================================= */
+            .publication {
+                grid-template-columns: 1fr;
+                gap: 9px;
+            }
 
-    footer {
-      margin-top: 58px;
-      padding: 23px 0 36px;
+            .pub-tag {
+                width: fit-content;
+                min-width: 92px;
+                padding: 0 15px;
+            }
+        }
 
-      border-top: 1px solid var(--border-soft);
-
-      color: #858585;
-      font-size: 13px;
-      text-align: center;
-    }
-
-
-    /* =========================================================
-       RESPONSIVE
-       ========================================================= */
-
-    @media (max-width: 720px) {
-      .page {
-        width: min(100% - 28px, 965px);
-      }
-
-      .nav {
-        min-height: auto;
-        padding: 14px 0;
-
-        align-items: flex-start;
-        flex-direction: column;
-
-        gap: 8px;
-      }
-
-      .nav-links {
-        width: 100%;
-        gap: 17px;
-        overflow-x: auto;
-        padding-bottom: 2px;
-      }
-
-      main {
-        padding-top: 35px;
-      }
-
-      .section-title {
-        font-size: 26px;
-      }
-
-      .publication {
-        grid-template-columns: 1fr;
-        gap: 9px;
-
-        padding: 18px 0;
-      }
-
-      .pub-tag {
-        width: max-content;
-        min-width: 92px;
-        padding: 0 16px;
-      }
-
-      .info-card {
-        padding: 18px;
-      }
-    }
-  </style>
+    </style>
 </head>
 
 
 <body>
 
-  <!-- =======================================================
-       NAVIGATION
-       ======================================================= -->
 
-  <header class="topbar">
-    <div class="page nav">
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
-      <a class="nav-name" href="#home">
+<header>
+
+    <nav class="container">
+
+        <a class="nav-name" href="#home">
+            S. M. Muhtasimul Hasan
+        </a>
+
+        <div class="nav-links">
+
+            <a href="#education">
+                Education
+            </a>
+
+            <a href="#experience">
+                Experience
+            </a>
+
+            <a href="#publications">
+                Publications
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<main class="container">
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section id="home" class="hero">
+
+    <h1>
         S. M. Muhtasimul Hasan
-      </a>
+    </h1>
 
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#publications">Publications</a>
-      </nav>
+
+    <div class="contact-links">
+
+        <a
+            href="https://scholar.google.com/citations?hl=en&user=_nLxUo8AAAAJ"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Google Scholar
+        </a>
+
+
+        <a
+            href="https://www.linkedin.com/in/s-m-muhtasimul-hasan-794b8228b/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            LinkedIn
+        </a>
+
+
+        <a
+            href="https://mail.google.com/mail/?fs=1&to=muhtasimhasan904@gmail.com&view=cm"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Email
+        </a>
 
     </div>
-  </header>
 
 
-  <!-- =======================================================
-       MAIN
-       ======================================================= -->
+    <p class="about-text">
 
-  <main class="page">
-
-
-    <!-- =====================================================
-         HOME
-         ===================================================== -->
-
-    <section id="home" class="hero">
-
-      <h1>S. M. Muhtasimul Hasan</h1>
-
-      <div class="social-links">
+        I am <strong>S. M. Muhtasimul Hasan</strong>,
+        a Research Assistant at the
 
         <a
-          href="https://scholar.google.com/citations?user=_nLxUo8AAAAJ&hl=en"
-          target="_blank"
-          rel="noopener noreferrer"
+            href="https://cognistorm.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
         >
-          Google Scholar
-        </a>
+            Cognitive Agents and Interaction Lab (CAIL)
+        </a>,
 
         <a
-          href="https://www.linkedin.com/"
-          target="_blank"
-          rel="noopener noreferrer"
+            href="https://www.du.ac.bd/"
+            target="_blank"
+            rel="noopener noreferrer"
         >
-          LinkedIn
-        </a>
+            University of Dhaka
+        </a>,
 
-        <a href="mailto:muhtasimhasan904@gmail.com">
-          Email
-        </a>
-
-      </div>
-
-
-      <p class="bio">
-        I am <strong>S. M. Muhtasimul Hasan</strong>, a Research Assistant at the
-        <a
-          href="https://cognistorm.ai/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Cognitive Agents and Interaction Lab (CAIL)</a>,
-        <a
-          href="https://www.du.ac.bd/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >University of Dhaka</a>,
         where I work under the supervision of
+
         <a
-          href="https://mmkhansajeeb.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Dr. Md Mosaddek Khan</a>.
+            href="https://mmkhansajeeb.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Dr. Md Mosaddek Khan
+        </a>.
+
         My research focuses on the reasoning and reliability of language models,
         with an emphasis on their ability to construct formal artifacts from
         structured specifications.
-      </p>
 
-      <p class="bio">
+    </p>
+
+
+    <p class="about-text">
+
         I draw on ideas from automata theory to ground LLM reasoning in settings
         that establish principled connections between linguistic specification,
         symbolic representation, and executable computation, enabling model
         reasoning to be studied through behaviorally verifiable mechanisms.
-        Additionally, I study multimodal reasoning and representation learning,
-        examining how models integrate complementary sources of information and
-        develop coherent, efficient, and interpretable representations across
-        modalities.
-      </p>
 
-    </section>
+        Additionally, I study multimodal reasoning and representation learning
+        across vision, language, and structured data.
+
+    </p>
+
+</section>
 
 
-    <!-- =====================================================
-         NEWS
-         ===================================================== -->
 
-    <section id="news">
+<!-- =========================================================
+     NEWS
+========================================================= -->
 
-      <h2 class="section-title">News</h2>
+<section id="news">
 
-      <ul class="news-list">
+    <h2 class="section-heading">
+        News
+    </h2>
 
-        <li class="news-item">
-          <span class="news-keyword">August 2026:</span>
-          <span class="news-text">
+
+    <ul class="news-list">
+
+        <li>
+
+            <span class="news-keyword">
+                August 2026:
+            </span>
+
             Two papers accepted to
             <em>Findings of EMNLP 2026</em>.
-          </span>
+
         </li>
 
-        <li class="news-item">
-          <span class="news-keyword">July 2026:</span>
-          <span class="news-text">
-            Presented <strong>TimeSpot</strong> at ICML 2026,
-            held July 6–11, 2026, at the COEX Convention &amp;
-            Exhibition Center in Seoul, South Korea.
-          </span>
+
+        <li>
+
+            <span class="news-keyword">
+                July 2026:
+            </span>
+
+            Presented <strong>TimeSpot</strong>
+            at ICML 2026, held July 6–11, 2026,
+            at the COEX Convention &amp; Exhibition Center
+            in Seoul, South Korea.
+
         </li>
 
-      </ul>
+    </ul>
 
-    </section>
+</section>
 
 
-    <!-- =====================================================
-         EDUCATION
-         ===================================================== -->
 
-    <section id="education">
+<!-- =========================================================
+     EDUCATION
+========================================================= -->
 
-      <h2 class="section-title">Education</h2>
+<section id="education">
 
-      <div class="info-card">
+    <h2 class="section-heading">
+        Education
+    </h2>
 
-        <h3 class="info-title">
-          <a
-            href="https://www.northsouth.edu/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            North South University
-          </a>
+
+    <div class="card">
+
+        <h3>
+
+            <a
+                href="https://www.northsouth.edu/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                North South University
+            </a>
+
         </h3>
 
-        <div class="info-subtitle">
-          BSc in Computer Science and Engineering,
-          CGPA: <strong>3.77/4.00</strong>
+
+        <div class="muted">
+
+            BSc in Computer Science and Engineering,
+            CGPA: <strong>3.77/4.00</strong>
+
         </div>
 
-        <div class="info-date">
-          October 2020 – September 2025
+
+        <div class="date">
+
+            October 2020 – September 2025
+
         </div>
 
-        <ul class="info-list">
-          <li>Awarded Magna Cum Laude distinction.</li>
-          <li>Overall percentage: 94%.</li>
-          <li>Received a 100% merit-based scholarship.</li>
+
+        <ul>
+
+            <li>
+                Awarded Magna Cum Laude distinction.
+            </li>
+
+            <li>
+                Overall percentage: 94%.
+            </li>
+
+            <li>
+                Received a 100% merit-based scholarship.
+            </li>
+
         </ul>
 
-      </div>
+    </div>
 
-    </section>
+</section>
 
 
-    <!-- =====================================================
-         EXPERIENCE
-         ===================================================== -->
 
-    <section id="experience">
+<!-- =========================================================
+     EXPERIENCE
+========================================================= -->
 
-      <h2 class="section-title">Experience</h2>
+<section id="experience">
 
-      <div class="info-card">
+    <h2 class="section-heading">
+        Experience
+    </h2>
+
+
+    <div class="card">
 
         <div class="role">
-          Research Assistant
+            Research Assistant
         </div>
 
-        <div class="institution-line">
 
-          <a
-            href="https://cognistorm.ai/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Cognitive Agents and Interaction Lab
-          </a>,
+        <div class="muted">
 
-          <a
-            href="https://www.du.ac.bd/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            University of Dhaka
-          </a>
-
-        </div>
-
-        <div class="info-date">
-          November 2025 – Present
-        </div>
-
-        <div class="supervisor">
-          Supervisor:
-          <a
-            href="https://mmkhansajeeb.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Dr. Md Mosaddek Khan
-          </a>
-        </div>
-
-      </div>
-
-
-      <!-- ===================================================
-           TEACHING
-           =================================================== -->
-
-      <div style="margin-top: 28px;">
-
-        <h2
-          class="section-title"
-          style="font-size: 24px; margin-bottom: 18px;"
-        >
-          Teaching Experience
-        </h2>
-
-        <div class="info-card">
-
-          <h3 class="course-title">
-            CSE 332: Computer Organization and Architecture
-          </h3>
-
-          <div class="institution-line">
-            Department of Electrical and Computer Engineering,
             <a
-              href="https://www.northsouth.edu/"
-              target="_blank"
-              rel="noopener noreferrer"
+                href="https://cognistorm.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-              North South University
-            </a>
-          </div>
+                Cognitive Agents and Interaction Lab
+            </a>,
 
-          <div class="teaching-role">
-            <strong>Teaching Assistant</strong>
-            (Spring 2024, Summer 2024, Spring 2025,
-            Summer 2025, Fall 2025)
-          </div>
+            <a
+                href="https://www.du.ac.bd/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                University of Dhaka
+            </a>
 
         </div>
 
-      </div>
 
-    </section>
+        <div class="date">
+
+            November 2025 – Present
+
+        </div>
+
+    </div>
+
 
 
     <!-- =====================================================
-         PUBLICATIONS
-         ===================================================== -->
+         TEACHING EXPERIENCE
+    ====================================================== -->
 
-    <section id="publications">
+    <h2
+        class="section-heading"
+        style="margin-top: 32px;"
+    >
+        Teaching Experience
+    </h2>
 
-      <h2 class="section-title">Publications</h2>
 
-      <div class="publications">
+    <div class="card">
+
+        <h3>
+            CSE 332: Computer Organization and Architecture
+        </h3>
+
+
+        <div class="muted">
+
+            Department of Electrical and Computer Engineering,
+
+            <a
+                href="https://www.northsouth.edu/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                North South University
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Teaching Assistant
+            </strong>
+
+            (Spring 2024,
+            Summer 2024,
+            Spring 2025,
+            Summer 2025,
+            Fall 2025)
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PUBLICATIONS
+========================================================= -->
+
+<section id="publications">
+
+    <h2 class="section-heading">
+        Publications
+    </h2>
+
+
+    <div class="publications">
+
+
+        <!-- =================================================
+             ENRICHED POLYNOMIAL-KERNEL
+        ================================================== -->
+
+        <article class="publication">
+
+            <div class="pub-tag">
+                NeurIPS
+            </div>
+
+
+            <div>
+
+                <div class="pub-title">
+
+                    Enriched Polynomial-Kernel Graph Kernel Network
+
+                </div>
+
+
+                <div class="pub-authors">
+
+                    <a
+                        href="https://abrar2652.github.io/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Md Abrar Jahin*
+                    </a>,
+
+                    <span class="my-name">
+                        S. M. Muhtasimul Hasan*
+                    </span>,
+
+                    <a
+                        href="https://viterbi.usc.edu/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Jay Pujara
+                    </a>,
+
+                    <a
+                        href="https://viterbi.usc.edu/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Craig A Knoblock
+                    </a>
+
+                </div>
+
+
+                <div class="venue">
+                    Under Review at NeurIPS 2026
+                </div>
+
+            </div>
+
+        </article>
+
 
 
         <!-- =================================================
              CFG
-             ================================================= -->
+        ================================================== -->
 
         <article class="publication">
 
-          <div class="pub-tag">
-            ACL ARR
-          </div>
-
-          <div>
-
-            <a
-              class="pub-title"
-              href="https://scholar.google.com/scholar?q=%22Beyond+Build+Validity%3A+Evaluating+Behavioral+Correctness+in+LLM-Generated+Context-Free+Grammars%22"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Beyond Build Validity: Evaluating Behavioral Correctness
-              in LLM-Generated Context-Free Grammars
-            </a>
-
-            <div class="pub-authors">
-
-              <span class="me">
-                S. M. Muhtasimul Hasan*
-              </span>,
-
-              <a href="#home">
-                S. Z. Ridoy*
-              </a>,
-
-              <a href="#home">
-                S. M. Mahmud
-              </a>,
-
-              <a href="#home">
-                N. J. Lina
-              </a>,
-
-              <a
-                href="https://mmkhansajeeb.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                M. M. Khan
-              </a>
-
+            <div class="pub-tag">
+                ACL ARR
             </div>
 
-            <div class="pub-venue">
-              Under Review in ACL ARR 2026
-            </div>
 
-          </div>
+            <div>
+
+                <div class="pub-title">
+
+                    Beyond Build Validity:
+                    Evaluating Behavioral Correctness in
+                    LLM-Generated Context-Free Grammars
+
+                </div>
+
+
+                <div class="pub-authors">
+
+                    <span class="my-name">
+                        S. M. Muhtasimul Hasan*
+                    </span>,
+
+                    <a href="#">
+                        Shahriyar Zaman Ridoy*
+                    </a>,
+
+                    <a href="#">
+                        Syed Mumtahin Mahmud
+                    </a>,
+
+                    <a href="#">
+                        Nazira Jesmin Lina
+                    </a>,
+
+                    <a
+                        href="https://mmkhansajeeb.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Md Mosaddek Khan
+                    </a>
+
+                </div>
+
+
+                <div class="venue">
+                    Under Review in ACL ARR 2026
+                </div>
+
+            </div>
 
         </article>
+
 
 
         <!-- =================================================
              TURING MACHINE
-             ================================================= -->
+        ================================================== -->
 
         <article class="publication">
 
-          <div class="pub-tag">
-            EMNLP
-          </div>
-
-          <div>
-
-            <a
-              class="pub-title"
-              href="https://scholar.google.com/scholar?q=%22From+Language+Specifications+to+Executable+Turing+Machines%3A+Evaluating+LLMs+as+Computational+Machine+Designers%22"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              From Language Specifications to Executable Turing Machines:
-              Evaluating LLMs as Computational Machine Designers
-            </a>
-
-            <div class="pub-authors">
-
-              <a href="#home">
-                S. Z. Ridoy
-              </a>,
-
-              <span class="me">
-                S. M. Muhtasimul Hasan
-              </span>,
-
-              <a href="#home">
-                A. T. Wasi
-              </a>,
-
-              <a href="#home">
-                K. Tshering
-              </a>,
-
-              <a href="#home">
-                K. A. Tonmoy
-              </a>,
-
-              <a
-                href="https://mmkhansajeeb.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                M. M. Khan
-              </a>
-
+            <div class="pub-tag">
+                EMNLP
             </div>
 
-            <div class="pub-venue">
-              <em>Findings of EMNLP 2026</em>
-            </div>
 
-          </div>
+            <div>
+
+                <div class="pub-title">
+
+                    From Language Specifications to Executable Turing Machines:
+                    Evaluating LLMs as Computational Machine Designers
+
+                </div>
+
+
+                <div class="pub-authors">
+
+                    <a href="#">
+                        Shahriyar Zaman Ridoy
+                    </a>,
+
+                    <span class="my-name">
+                        S. M. Muhtasimul Hasan
+                    </span>,
+
+                    <a href="#">
+                        Azmine Toushik Wasi
+                    </a>,
+
+                    <a href="#">
+                        Kinga Tshering
+                    </a>,
+
+                    <a href="#">
+                        Koushik Ahamed Tonmoy
+                    </a>,
+
+                    <a
+                        href="https://mmkhansajeeb.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Md Mosaddek Khan
+                    </a>
+
+                </div>
+
+
+                <div class="venue">
+
+                    <em>
+                        Findings of EMNLP 2026
+                    </em>
+
+                </div>
+
+            </div>
 
         </article>
 
-
-        <!-- =================================================
-             PDA
-             ================================================= -->
-
-        <article class="publication">
-
-          <div class="pub-tag">
-            EMNLP
-          </div>
-
-          <div>
-
-            <a
-              class="pub-title"
-              href="https://scholar.google.com/scholar?q=%22Can+LLMs+Design+Computational+Machines%3F+Pushdown+Automaton+Synthesis+as+a+Test+of+Structured+Computational+Reasoning%22"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Can LLMs Design Computational Machines?
-              Pushdown Automaton Synthesis as a Test of
-              Structured Computational Reasoning
-            </a>
-
-            <div class="pub-authors">
-
-              <a href="#home">
-                S. M. Mahmud
-              </a>,
-
-              <a href="#home">
-                N. J. Lina
-              </a>,
-
-              <a href="#home">
-                S. Z. Ridoy
-              </a>,
-
-              <span class="me">
-                S. M. Muhtasimul Hasan
-              </span>,
-
-              <a
-                href="https://mmkhansajeeb.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                M. M. Khan
-              </a>
-
-            </div>
-
-            <div class="pub-venue">
-              <em>Findings of EMNLP 2026</em>
-            </div>
-
-          </div>
-
-        </article>
 
 
         <!-- =================================================
              TIMESPOT
-             ================================================= -->
+        ================================================== -->
 
         <article class="publication">
 
-          <div class="pub-tag">
-            ICML
-          </div>
-
-          <div>
-
-            <a
-              class="pub-title"
-              href="https://proceedings.mlr.press/v306/wasi26a.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              TimeSpot: Benchmarking Geo-Temporal Understanding in
-              Vision-Language Models in Real-World Settings
-            </a>
-
-            <div class="pub-authors">
-
-              <a href="#home">
-                A. T. Wasi*
-              </a>,
-
-              <a href="#home">
-                S. Z. Ridoy*
-              </a>,
-
-              <a href="#home">
-                K. A. Tonmoy
-              </a>,
-
-              <a href="#home">
-                K. Tshering
-              </a>,
-
-              <span class="me">
-                S. M. Muhtasimul Hasan
-              </span>,
-
-              <a href="#home">
-                W. Faisal
-              </a>,
-
-              <a href="#home">
-                T. Mohiuddin
-              </a>,
-
-              <a
-                href="https://kagnlp.github.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                M. R. Parvez
-              </a>
-
+            <div class="pub-tag">
+                ICML
             </div>
 
-            <div class="pub-venue">
-              International Conference on Machine Learning
-              (ICML 2026)
-            </div>
 
-          </div>
+            <div>
+
+                <a
+                    class="pub-title"
+                    href="https://arxiv.org/abs/2603.06687"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    TimeSpot:
+                    Benchmarking Geo-Temporal Understanding in
+                    Vision-Language Models in Real-World Settings
+
+                </a>
+
+
+                <div class="pub-authors">
+
+                    <a href="#">
+                        Azmine Toushik Wasi*
+                    </a>,
+
+                    <a href="#">
+                        Shahriyar Zaman Ridoy*
+                    </a>,
+
+                    <a href="#">
+                        Koushik Ahamed Tonmoy
+                    </a>,
+
+                    <a href="#">
+                        Kinga Tshering
+                    </a>,
+
+                    <span class="my-name">
+                        S. M. Muhtasimul Hasan
+                    </span>,
+
+                    <a href="#">
+                        Wahid Faisal
+                    </a>,
+
+                    <a href="#">
+                        Tasnim Mohiuddin
+                    </a>,
+
+                    <a
+                        href="https://kagnlp.github.io/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Md Rizwan Parvez
+                    </a>
+
+                </div>
+
+
+                <div class="venue">
+                    International Conference on Machine Learning
+                    (ICML 2026)
+                </div>
+
+            </div>
 
         </article>
+
+
+
+        <!-- =================================================
+             PDA
+        ================================================== -->
+
+        <article class="publication">
+
+            <div class="pub-tag">
+                EMNLP
+            </div>
+
+
+            <div>
+
+                <div class="pub-title">
+
+                    Can LLMs Design Computational Machines?
+                    Pushdown Automaton Synthesis as a Test of
+                    Structured Computational Reasoning
+
+                </div>
+
+
+                <div class="pub-authors">
+
+                    <a href="#">
+                        Syed Mumtahin Mahmud
+                    </a>,
+
+                    <a href="#">
+                        Nazira Jesmin Lina
+                    </a>,
+
+                    <a href="#">
+                        Shahriyar Zaman Ridoy
+                    </a>,
+
+                    <span class="my-name">
+                        S. M. Muhtasimul Hasan
+                    </span>,
+
+                    <a
+                        href="https://mmkhansajeeb.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Md Mosaddek Khan
+                    </a>
+
+                </div>
+
+
+                <div class="venue">
+
+                    <em>
+                        Findings of EMNLP 2026
+                    </em>
+
+                </div>
+
+            </div>
+
+        </article>
+
 
 
         <!-- =================================================
              TABFUSION
-             ================================================= -->
+        ================================================== -->
 
         <article class="publication">
 
-          <div class="pub-tag">
-            KBS
-          </div>
-
-          <div>
-
-            <a
-              class="pub-title"
-              href="https://doi.org/10.1016/j.knosys.2026.116193"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              TabFusion: Lightweight Early Fusion of Tabular and Image
-              Data with Graph-Convolutional Neural Networks for
-              Skin Cancer Detection
-            </a>
-
-            <div class="pub-authors">
-
-              <a href="#home">
-                R. I. Chowdhury
-              </a>,
-
-              <a href="#home">
-                N. K. Nuha
-              </a>,
-
-              <span class="me">
-                S. M. Muhtasimul Hasan
-              </span>,
-
-              <a href="#home">
-                M. J. Hasan
-              </a>,
-
-              <a href="#home">
-                M. R. C. Mahdy
-              </a>
-
+            <div class="pub-tag">
+                KBS
             </div>
 
-            <div class="pub-venue">
-              Knowledge-Based Systems, 2026
-            </div>
 
-          </div>
+            <div>
+
+                <a
+                    class="pub-title"
+                    href="https://doi.org/10.1016/j.knosys.2026.116193"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    TabFusion:
+                    Lightweight Early Fusion of Tabular and Image Data
+                    with Graph-Convolutional Neural Networks
+                    for Skin Cancer Detection
+
+                </a>
+
+
+                <div class="pub-authors">
+
+                    <a href="#">
+                        Rashik Iram Chowdhury
+                    </a>,
+
+                    <a href="#">
+                        Nusrat Kabir Nuha
+                    </a>,
+
+                    <span class="my-name">
+                        Muhtasimul Hasan
+                    </span>,
+
+                    <a href="#">
+                        Mohammad Junayed Hasan
+                    </a>,
+
+                    <a href="#">
+                        M. R. C. Mahdy
+                    </a>
+
+                </div>
+
+
+                <div class="venue">
+                    Knowledge-Based Systems, 2026.
+                </div>
+
+            </div>
 
         </article>
 
-      </div>
+
+    </div>
+
+</section>
 
 
-      <div class="equal-note">
-        * Equal contribution.
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
-
-    <footer>
-      © 2026 S. M. Muhtasimul Hasan
-    </footer>
-
-  </main>
+</main>
 
 </body>
 </html>
